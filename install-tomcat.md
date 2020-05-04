@@ -51,5 +51,4 @@ go to conf/tomcat-users.xml
 <role rolename="manager-script"/>
 <user username="deployer" password="deployer" roles="manager-script"/>
 
-
 restart tomcat
