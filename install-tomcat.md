@@ -11,9 +11,9 @@ wget <paste the tar.gz address copied in step1>
 #extract 
 tar -xvzf <tar file name>
 
-#Under Apache Tomcat folder, there exists two files, namely; startup.sh and shutdown.sh. Browse to the bin folder
+#Browse to the bin folder under tomcat folder.  Two files, namely; startup.sh and shutdown.sh. 
 
-#Now lets start tomcat service
+#Sstart tomcat service
 ./startup.sh
 
 /*Change port number from 8080 to 8090 (if your Jenkins on AWS is also listening to the port 8080)
