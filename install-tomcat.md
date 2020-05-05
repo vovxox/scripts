@@ -1,3 +1,11 @@
+#check java version in EC2 linux instance 
+java -version
+#install openjdk 8
+sudo yum install java-1.8.0-openjdk
+
+#remove old version
+sudo yum remove java
+
 #tomcat website http://tomcat.apache.org/
 
 #Copy download link from https://apache.mirror.gtcomm.net/tomcat/tomcat-9/v9.0.34/bin/apache-tomcat-9.0.34.tar.gz
