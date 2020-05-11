@@ -8,7 +8,7 @@ sudo yum remove java
 
 #tomcat website http://tomcat.apache.org/
 
-#Copy download link from https://apache.mirror.gtcomm.net/tomcat/tomcat-9/v9.0.34/bin/apache-tomcat-9.0.34.tar.gz
+#Copy download link from http://apache.forsale.plus/tomcat/tomcat-8/v8.5.54/bin/apache-tomcat-8.5.54.tar.gz
 
 #login to EC2 instance and change user to sudo  
 sudo su -
