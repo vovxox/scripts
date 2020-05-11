@@ -21,6 +21,6 @@ docker-compose --version
 
 sudo sysctl -w vm.max_map_count=262144
 mkdir sonar
-wget https://raw.githubusercontent.com/awstechguide/devops/master/docker-compose.yml
+wget https://raw.githubusercontent.com/awstechguide/scripts/master/docker-compose.yml
 sudo docker–compose up
 docker ps
