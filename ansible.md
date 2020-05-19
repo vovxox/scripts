@@ -1,7 +1,6 @@
+#ansible
 
-#OPEN this file in RAW MODE
-
-documentation:
+# documentation:
 https://docs.ansible.com/
 
 
@@ -64,6 +63,54 @@ passwd -x -1 awstechguide
 
 #################################connect remote host ###############################
 
+# create user in remote. best practice is not to use root user for ansible connection
+useradd -d /home/awstechguideremote -m awstechguideremote
+passwd -x -1 ansdm
+
+# setup keys in client nodes
+
+# in client node, change user from root to awstechguideremote
+su - awstechguideremote
+
+#create directory under  'awstechguideremote' profile home
+mkdir .ssh
+
+#change directory permisstion
+chmod 700 .ssh/
+
+#make owner of directory awstechguideremote
+chown awstechguideremote:awstechguideremote .ssh/
+cd .ssh/
+
+#create key
+ssh-keygen
+
+#create an authorize key file 
+vi authorized_keys
+
+#save the authorized_keys file and set the file owner as awstechguide
+chown awstechguidedb:awstechguidedb authorized_keys
+
+#check file permission
+ls -l
+
+#change the permission to 600
+chmod 600 authorized_keys
+
+
+###########Go to Ansible etc/ansible###################
+
+# create a key file by any name from private key of remote host which you copied
+
+[root@ip-172-31-83-158 ansible]# vi remote-ec2-dbserver.key
+# change permission
+[root@ip-172-31-83-158 ansible]# chmod 600 remote-ec2-dbserver.key
+
+# edit hosts file 
+[dbservers] # groupname
+<remote host ip> ansible_ssh_user=<remote host user> ansible_ssh_private_key_file=<private key file path of remote host in ansible host>
+18.207.206.186 ansible_ssh_user=awstechguidedb ansible_ssh_private_key_file=/etc/ansible/remote-ec2-dbserver.key
+
 
 ###############
 # update host with remote ip by group
@@ -109,9 +156,9 @@ Your public key has been saved in /home/awstg/.ssh/id_rsa.pub.
 # VERY IMPORTANT STEP: 
 # [ remote host ]copy public key in authorized_keys
 # copy private key of remotehost from id_rsa and in ansible host system under /etc/ansible  create a new file with any name. like remotehost.key. and past the private key which you copied 
-#from remotehost
+# from remotehost
 awstg@remotehost:~/.ssh$ cat id_rsa.pub
-copy the public key in authorized_keys file 
+#copy the public key in authorized_keys file 
 awstg@remotehost:~/.ssh$ vi authorized_keys
 
 # open and copy private key id_rsa from remote host
@@ -134,9 +181,13 @@ chmod 600 remotehost1.key
 ssh -p22 -i /etc/ansible/remotehost1.key <remotehost username>@<remote host ip>
 ssh -p22 -i /etc/ansible/remotehost1.key ec2-user@54.164.166.210
 
+ssh -p22 -i /etc/ansible/remote-ec2-dbserver.key awstechguidedb@18.207.206.186
+
 #update vi etc/ansible/host
 [webservers]
 54.164.166.210 ansible_ssh_user=<hostname of remote system> ansible_ssh_private_key_file=<key file location in ansible host to connect the particular remote host>
 54.164.166.210 ansible_ssh_user=ec2-user ansible_ssh_private_key_file=/etc/ansible/remotehost1.key
 
+#ping remote host by group name . dbservers
+ansible dbservers -m ping
 ####################################################################################
