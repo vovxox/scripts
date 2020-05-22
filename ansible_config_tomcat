@@ -5,7 +5,7 @@
     vars:
       java_v: java-1.8.0-openjdk
       set_java: jre-1.8.0-openjdk.x86_64
-	  tomcat_port: 8181
+      tomcat_port: 8181
       tomcat_version: 8.5.55
       tomcat_url: "https://mirror.csclub.uwaterloo.ca/apache/tomcat/tomcat-{{tomcat_version.split('.')[0]}}/v{{tomcat_version}}/bin/apache-tomcat-{{tomcat_version}}.tar.gz"
     become: yes
