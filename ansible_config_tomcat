@@ -38,5 +38,17 @@
        template:
          src: server.xml.j2
          dest: /usr/local/tomcat/conf/server.xml 
-     - name: Starting tomcat
-       shell: nohup /usr/local/tomcat/bin/startup.sh &
+    - name: Updating users and role
+      template:
+        src: tomcat-users.xml
+        dest: /usr/local/tomcat/conf/tomcat-users.xml
+    - name: Updating context xml restriction
+      template:
+        src: context-manager.xml
+        dest: /usr/local/tomcat/webapps/manager/META-INF/context.xml
+    - name: Updating restriction for host manager context
+      template:
+        src: context-hostmanager.xml
+        dest: /usr/local/tomcat/webapps/host-manager/META-INF/context.xml
+    - name: Starting tomcat
+      shell: nohup /usr/local/tomcat/bin/startup.sh &
