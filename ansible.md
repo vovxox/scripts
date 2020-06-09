@@ -149,6 +149,9 @@ ssh -p22 -i /etc/ansible/remotehost-web.key awstgremotedb@3.86.186.116
 [webservers]
 54.164.166.210 ansible_ssh_user=<hostname of remote system> ansible_ssh_private_key_file=<key file location in ansible host to connect the particular remote host>
 54.164.166.210 ansible_ssh_user=ec2-user ansible_ssh_private_key_file=/etc/ansible/remotehost1.key
+OR to pass the sudo password for remote host use below command
+54.160.76.21 ansible_ssh_user=awstgremoteweb ansible_ssh_private_key_file=/etc/ansible/webserver1.key ansible_sudo_pass=awstgremoteweb
+
 
 
 //ping remote host by group name . dbservers
