@@ -152,6 +152,9 @@ ssh -p22 -i /etc/ansible/remotehost-web.key awstgremotedb@3.86.186.116
 OR to pass the sudo password for remote host use below command
 54.160.76.21 ansible_ssh_user=awstgremoteweb ansible_ssh_private_key_file=/etc/ansible/webserver1.key ansible_sudo_pass=awstgremoteweb
 
+OR if you are not connecting using SSHkey. just ssh password then use below command in inventory file
+<remote host ip> ansible_user=<remote host user name> ansible_password=<remote host password>
+52.160.40.11 ansible_user=awstgremotehost ansible_password=awstgremotehost
 
 
 //ping remote host by group name . dbservers
