@@ -1,6 +1,16 @@
 # Table of Contents for 'Script' repository
 
+# Online Tutorials
+DevOps - https://www.youtube.com/watch?v=1dwsr0v0FAg&list=PLuBBTh-4TzDlC1y8XEGH-PWPhvukSKChi
+IT Automation - https://www.youtube.com/watch?v=EGWyN6DMI1g&list=PLuBBTh-4TzDkWz4LlACiPK2jDiWjU-mMJ
+Install and Configure - https://www.youtube.com/watch?v=ftAWCI_z1Lg&list=PLuBBTh-4TzDl8KsOCTNhABDhdrD_8V1nx
+Azure - https://www.youtube.com/watch?v=iYfSMjbjL50&list=PLuBBTh-4TzDmj9c2kW24q5C2IfGXMMt4a
+Google Cloud Platform - https://www.youtube.com/watch?v=UI1Lv1Ageso&list=PLuBBTh-4TzDnkaORFW-MhhHp9PU-n9CKW
+Test Automation - https://www.youtube.com/watch?v=Ny_8ikCbmcQ&list=PLuBBTh-4TzDk2qlFE86Y4C-UukuCxE775
+Spring - https://www.youtube.com/watch?v=95-TwERKKRc&list=PLuBBTh-4TzDlcxArXnYQR0zeZglAG_9eu
+
 ## Ansible
+Ansible Hands-on tutorials https://www.youtube.com/watch?v=EGWyN6DMI1g&list=PLuBBTh-4TzDkWz4LlACiPK2jDiWjU-mMJ
 
 Install and Configure Ansible (https://raw.githubusercontent.com/awstechguide/scripts/master/ansible.md)
 
@@ -8,6 +18,7 @@ Install and Configure Ansible (https://raw.githubusercontent.com/awstechguide/sc
 Ansible playbook to configure tomcat with Amazon Linux remote host (https://raw.githubusercontent.com/awstechguide/scripts/master/ansible_configure_tomcat_amazon_linux.yml)
 
 Ansible playbook to configure tomcat for ubuntu remote host (https://raw.githubusercontent.com/awstechguide/scripts/master/ansible_playbook_configure_tomcat_ubuntu.yml)
+
 
 ## Docker
 Install docker in ubuntu - https://raw.githubusercontent.com/awstechguide/scripts/master/install-docker.sh
@@ -29,3 +40,4 @@ Maven command (https://raw.githubusercontent.com/awstechguide/scripts/master/cre
 
 ## Install jdk and alternatives command in Amazon Linux
 Install jdk and set default java https://raw.githubusercontent.com/awstechguide/scripts/master/install-java.sh
+
