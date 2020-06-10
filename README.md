@@ -29,21 +29,28 @@ Ansible playbook to configure tomcat for ubuntu remote host (https://raw.githubu
 
 ## Docker
 Install docker in ubuntu - https://raw.githubusercontent.com/awstechguide/scripts/master/install-docker.sh
+Video tutorial - https://www.youtube.com/watch?v=ftAWCI_z1Lg
 
 ## Jenkins
 Install Jenkins and Docker - https://raw.githubusercontent.com/awstechguide/scripts/master/install-jenkins-docker.sh
 
+video tutorial https://www.youtube.com/watch?v=2cDl2E9h-6M
+
 ## SonarQube 
 Install SonarQube - https://raw.githubusercontent.com/awstechguide/scripts/master/install-sonar-docker.md
 Docker compose file for SonarQube (https://raw.githubusercontent.com/awstechguide/scripts/master/docker-compose.yml)
+Video tutorial https://www.youtube.com/watch?v=-aDjIMwYy34
 
 
 ## Tomcat
 Install and Configure Tomcat (https://raw.githubusercontent.com/awstechguide/scripts/master/install-tomcat.md)
+Video tutorial https://www.youtube.com/watch?v=BGwW-22m_Hs
 
 
 ## Command for creating Maven project
 Maven command (https://raw.githubusercontent.com/awstechguide/scripts/master/create-maven-project-cmd.md)
+
+Video tutorial - https://www.youtube.com/watch?v=y4UYX0ZPqcM
 
 ## Install jdk and alternatives command in Amazon Linux
 Install jdk and set default java https://raw.githubusercontent.com/awstechguide/scripts/master/install-java.sh
