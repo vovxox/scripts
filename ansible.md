@@ -144,6 +144,7 @@ chmod 600 remotehost1.key
 //test ssh connection from ansible host/controller to remote hosts
 ssh -p22 -i /etc/ansible/remotehost1.key <remotehost username>@<remote host ip>
 ssh -p22 -i /etc/ansible/remotehost-web.key awstgremotedb@3.86.186.116
+ssh -p22 ansadmin@40.112.208.131
 
 //update vi etc/ansible/host
 [webservers]
