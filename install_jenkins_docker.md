@@ -7,7 +7,7 @@
 # pull docker image
 docker pull jenkins
 
-#create docker volume
+# create docker volume
 docker volume create jenkins
 
 # list docker volumes
