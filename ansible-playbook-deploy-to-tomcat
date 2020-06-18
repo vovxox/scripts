@@ -1,9 +1,9 @@
 ---
   - name: Deploy web app in tomcat
+    hosts: webservers
     become: yes
-	tasks:
-	  - name: copy war into tomcat
-	    copy:
-		  src: /opt/temp/*.war
-		  dest: /usr/local/tomcat/webapps
-  
+    tasks:
+     - name: copy war into tomcat
+       copy:
+         src: /opt/temp/target/webapptest.war
+         dest: /usr/local/tomcat/webapps
