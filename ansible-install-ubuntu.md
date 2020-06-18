@@ -8,7 +8,7 @@ sudo apt-get upgrade -y
 
 sudo apt-get update
 
-### Add repositoru for ansible
+### Add repository for ansible
 
 sudo apt-add-repository ppa:ansible/ansible
 
