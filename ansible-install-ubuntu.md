@@ -5,6 +5,7 @@
 ### Update and Upgrade the server. After upgrade reboot
 
 sudo apt-get upgrade -y
+
 sudo apt-get update
 
 ### Add repositoru for ansible
