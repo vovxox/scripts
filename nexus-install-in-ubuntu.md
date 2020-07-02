@@ -50,8 +50,10 @@ sudo ln -s /opt/nexus/bin/nexus /etc/init.d/nexus
 
 http://nexuxserver url:8081  (default 8081). Make sure you have 8081 port in your security group (for AWS) / network rule (for Azure) / ingress rule ( for GCP) 
 
-Use default credentials to login
+Use below credentials to login
 
 username : admin
 
-password : admin123
+get initial password from path /opt/sonatype-work/nexus3/admin.password 
+
+run cat /opt/sonatype-work/nexus3/admin.password in your nexus server. 
