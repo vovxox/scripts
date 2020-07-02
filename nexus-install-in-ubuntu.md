@@ -15,16 +15,16 @@ wget https://sonatype-download.global.ssl.fastly.net/nexus/3/nexus-3.24.0-02-uni
 tar -zxvf  nexus-3.24.0-02-unix.tar.gz
 mv /opt/nexus-3.24.0-02-unix /opt/nexus
 
-# add user. (best practice to avoid root user. create new user)
+## add user. (best practice to avoid root user. create new user)
 
 useradd -d /home/awstechguide -m awstechguide
 
 passwd awstechguide passwd -x -1 awstechguide
 
 ## add priviledge to new user
-# visudo \\ nexus   ALL=(ALL)       NOPASSWD: ALL
+visudo \\ nexus   ALL=(ALL)       NOPASSWD: ALL
 
-# change ownership to new user
+## change ownership to new user
 sudo chown -R awstechguide:awstechguide /opt/nexus
 
 
