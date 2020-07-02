@@ -32,6 +32,7 @@ sudo adduser nexus
 
 ## change ownership to new user
 sudo chown -R nexus:nexus /opt/nexus
+
 sudo chown -R nexus:nexus /opt/sonatype-work
 
 ## update /opt/nexus/bin/nexus.rc file, just uncomment run_as_user
@@ -45,6 +46,7 @@ run_as_user="nexus"
 sudo ln -s /opt/nexus/bin/nexus /etc/init.d/nexus
 
 ## start nexus
+
 /etc/init.d/nexus start
 
 
