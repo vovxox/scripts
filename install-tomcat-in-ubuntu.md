@@ -1,8 +1,7 @@
 
 
 ## update packages
-
-``` sudo apt-get update ```
+    <pre> sudo apt-get update <pre>
 
 ## install openjdk 8
 
