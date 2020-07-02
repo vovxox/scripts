@@ -21,15 +21,14 @@ tar -zxvf  nexus-3.24.0-02-unix.tar.gz
 
 mv /opt/nexus-3.24.0-02 /opt/nexus
 
-## change directory permission
-chmod 700 /opt/nexus
-
 ## add user. (best practice to avoid root user. create new user)
 
 sudo adduser nexus
 
 ## add priviledge to new user
- visudo \\ nexus   ALL=(ALL)       NOPASSWD: ALL
+ visudo 
+ 
+ ###add  nexus   ALL=(ALL)       NOPASSWD: ALL
 
 ## change ownership to new user
 sudo chown -R nexus:nexus /opt/nexus
@@ -45,12 +44,8 @@ run_as_user="nexus"
 
 sudo ln -s /opt/nexus/bin/nexus /etc/init.d/nexus
 
-
-cd /etc/init.d
-
-update-rc.d nexus defaults
-
-service nexus start
+## start nexus
+/etc/init.d/nexus start
 
 
 http://nexuxserver url:8081  (default 8081). Make sure you have 8081 port in your security group (for AWS) / network rule (for Azure) / ingress rule ( for GCP) 
