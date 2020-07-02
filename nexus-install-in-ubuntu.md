@@ -21,6 +21,9 @@ tar -zxvf  nexus-3.24.0-02-unix.tar.gz
 
 mv /opt/nexus-3.24.0-02 /opt/nexus
 
+# change directory permission
+chmod 700 /opt/nexus
+
 ## add user. (best practice to avoid root user. create new user)
 
 sudo adduser nexus
