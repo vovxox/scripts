@@ -37,4 +37,5 @@ tar xvzf apache-tomcat-8.5.56.tar.gz
 
 ``` ps -ef | grep tomcat
 
-sudo kill -9 <processid> ```
+sudo kill -9 <processid> 
+```
