@@ -49,6 +49,18 @@ sudo ln -s /opt/nexus/bin/nexus /etc/init.d/nexus
 
 /etc/init.d/nexus start
 
+## check the services running on ports
+
+netstat -nlpt
+
+it should show like below 
+
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+###tcp        0      0 0.0.0.0:8081            0.0.0.0:*               LISTEN      -               
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      -               
+tcp        0      0 127.0.0.1:36665         0.0.0.0:*               LISTEN      -               
+tcp6       0      0 :::22                   :::*                    LISTEN      -          
+
 
 http://nexuxserver url:8081  (default 8081). Make sure you have 8081 port in your security group (for AWS) / network rule (for Azure) / ingress rule ( for GCP) 
 
