@@ -72,3 +72,14 @@ username : admin
 get initial password from path /opt/sonatype-work/nexus3/admin.password 
 
 run cat /opt/sonatype-work/nexus3/admin.password in your nexus server. 
+
+
+# pull artifact from nexus to jenkins and deploy to tomcat 
+## in JENKINS build job write below shell script to pull artifact 
+
+wget --user=<nexux username> --password=<password> <nexus artifact url (war/ear)>
+
+wget --user=admin --password=admin http://35.184.138.42:8081/repository/maven-snapshots/awstechguide/spring-webapp/1.0.0-SNAPSHOT/spring-webapp-1.0.0-20200703.145607-1.WAR
+
+
+
