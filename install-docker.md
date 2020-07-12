@@ -56,3 +56,37 @@ sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING> c
 ## Verify that Docker Engine is installed correctly by running the hello-world image.
 
 sudo docker run hello-world
+
+
+### *********dont user root for docker setup***********
+## login to your VM instance
+## Change the user to sudo 
+
+sudo su -
+
+## create an user 
+
+useradd -d /home/awstechguide -m awstechguide
+
+## create password for this user. a non expiry password
+
+passwd awstechguide
+passwd -x -1 awstechguide
+
+
+### *********add user to docker group after docker installation***********
+
+## To create the docker group and add your user:
+
+## Create the docker group.
+ sudo groupadd docker
+
+## Add your user to the docker group.
+ sudo usermod -aG docker ${USER}
+
+## You would need to loog out and log back in so that your group membership is re-evaluated or type the following command:
+ su -s ${USER}
+
+
+## Verify that you can run docker commands without sudo.
+ docker run hello-world
