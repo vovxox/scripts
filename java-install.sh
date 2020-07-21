@@ -9,3 +9,6 @@ java -version
 
 // if its not the one you installed then run the below command to set the java version. 
 sudo sudo update-alternatives --config java
+
+//if you want to uninstall existing java
+sudo yum remove java
