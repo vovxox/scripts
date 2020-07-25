@@ -43,7 +43,9 @@ Video tutorial https://www.youtube.com/watch?v=-aDjIMwYy34
 
 
 ## Tomcat
-Install and Configure Tomcat (https://raw.githubusercontent.com/awstechguide/scripts/master/install-tomcat.md)
+Install and Configure Tomcat 
+in Ubuntu https://raw.githubusercontent.com/awstechguide/scripts/master/install-tomcat-in-ubuntu.md
+in Amazon Linux AMI https://raw.githubusercontent.com/awstechguide/scripts/master/install-tomcat-ec2-linux.md 
 Video tutorial https://www.youtube.com/watch?v=BGwW-22m_Hs
 
 
