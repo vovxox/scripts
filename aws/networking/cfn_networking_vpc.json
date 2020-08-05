@@ -175,7 +175,8 @@
             "Type" : "AWS::EC2::EIP",
             "DependsOn" : "igwvpc1attachment",
             "Properties" : {
-              "Domain" : "vpc"
+              "Domain" : "vpc",
+			  "InstanceId" : { "Ref" : "bastion" }
             }
         },
         "bastion" : {
