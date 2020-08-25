@@ -8,7 +8,7 @@ def lambda_handler(event, context):
 	rate = event['queryStringParameters']['r']
 	time = event['queryStringParameters']['t']
 
-  principal = int(principal)
+        principal = int(principal)
 	rate = float(rate)
 	time = int(time)
 	
