@@ -8,17 +8,17 @@ const generateUUID = () => crypto.randomBytes(16).toString("hex");
 const documentClient = new AWS.DynamoDB.DocumentClient();
 
 exports.handler = async event => {
-  const { transactionNo } = JSON.parse(event.body);
-  const { date } = JSON.parse(event.body);
-  const { amount } = JSON.parse(event.body);
+  const { empNo } = JSON.parse(event.body);
+  const { empName } = JSON.parse(event.body);
+  const { empEmail } = JSON.parse(event.body);
   
   const params = {
-    TableName: "Transaction", // The name of your DynamoDB table
+    TableName: "Employee", // The name of your DynamoDB table
     Item: { // Creating an Item with a unique id and with the passed title
-      transactionid: generateUUID(),
-      transactionNo: transactionNo,
-	  date: date,
-	  amount: amount
+      empid: generateUUID(),
+      empNo: empNo,
+      empName: empName,
+      empEmail: empEmail
     }
   };
   try {
@@ -36,8 +36,16 @@ exports.handler = async event => {
 };
 
 
-// Test JSON format as below
+// Test JSON format while testing in Lambda
 
 {
-  "body": "{\"transactionNo\": \"110011\",\"date\": \"2020-10-01\",\"amount\": \"210\"}"
+  "body": "{\"empNo\": \"110011\",\"empName\": \"New Employee\",\"empEmail\": \"som@awstechguide.com\"}"
+}
+
+// Test JSON format while testing through a client like POSTMAN
+
+{
+  "empNo": "220011",
+  "empName": "New Employee",
+  "empEmail": "som@awstechguide.com"
 }
