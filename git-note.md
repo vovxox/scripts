@@ -2,7 +2,6 @@
 
 ## create new branch from another
 git checkout -b new-branch old-branch;
-git checkout old-branch
 git push --set-upstream origin new-branch;
 
 ## checkout a branch
