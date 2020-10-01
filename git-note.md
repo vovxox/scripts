@@ -1,3 +1,12 @@
+## create new branch from another
+git checkout -b new-branch old-branch;
+git push --set-upstream origin old-branch;
+
+## checkout a branch
+git checkout branchname
+
+
+
 # Merge code from feature branch 'dev-branch' to master
 # ...develop some code...
 
