@@ -67,3 +67,6 @@ Update angular.json configuration. add a new section under projects/architect/bu
           }
         }
 
+Build application for custom environment. Now build your application for targeted environment by specific --configuration parameter to ng build command.
+ng build --configuration stg
+and dist folder shall contains build output with stg configuration.
