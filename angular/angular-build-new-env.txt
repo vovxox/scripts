@@ -9,8 +9,8 @@ For each target environment,  create a new file under folder environments. like:
 update env file with below code snipet and update according to your env settings. 
 export const environment = {
   stg: true,
-  environmentName: 'QA',
-  apiUrl: 'QA url'
+  environmentName: 'Stage',
+  apiUrl: 'Stage url'
 };
 
 Use environment settings inside components
