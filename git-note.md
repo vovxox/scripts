@@ -18,3 +18,8 @@ git checkout branchname
 Switched to branch 'master'
  git merge dev-branch  (this is to merge changes from dev-branch to master)
 git push (push changes in master branch)
+
+
+## git commit history 
+
+git log --pretty=oneline
