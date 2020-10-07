@@ -1,16 +1,15 @@
 
 
-## create new branch from another
+### create new branch from another
+
 git checkout -b new-branch old-branch;
 git push --set-upstream origin new-branch;
 
-## checkout a branch
+### checkout a branch
+
 git checkout branchname
 
-
-
-# Merge code from feature branch 'dev-branch' to master
-# ...develop some code...
+### Merge code from feature branch 'dev-branch' to master
 
  git add –A
  git commit –m "Some commit message"
@@ -20,6 +19,26 @@ Switched to branch 'master'
 git push (push changes in master branch)
 
 
-## git commit history 
+### git commit history 
 
 git log --pretty=oneline
+
+### delete branch locally
+git branch -d localBranchName
+
+### delete branch remotely
+git push origin --delete remoteBranchName
+
+### The command to list all branches in local and remote repositories is:
+
+git branch -a
+
+### If you require only listing the remote branches from Git Bash then use this command:
+
+git branch -r
+
+### You may also use the show-branch command for seeing the branches and their commits as follows:
+
+git show-branch
+
+
