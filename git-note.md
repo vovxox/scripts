@@ -43,9 +43,9 @@ git show-branch
 
 ### If you want to rename a branch while pointed to any other branch
 
-git branch -m <oldname> <newname>
+git branch -m oldname newname
 
 ### If you want to rename the current branch
 
-git branch -m <newname>
+git branch -m newname
 
