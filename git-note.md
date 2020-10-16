@@ -49,3 +49,6 @@ git branch -m oldname newname
 
 git branch -m newname
 
+### list content 
+
+ls - ltrh 
