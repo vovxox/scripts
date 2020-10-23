@@ -2,6 +2,18 @@
 
 java -version
 
+## For installing OpenJDK 11 in Ubuntu 
+
+sudo apt-get update && sudo apt-get upgrade -y 
+
+sudo apt-get install openjdk-11-jdk
+
+### Alternatively, if you need JRE only then 
+
+sudo apt-get install openjdk-11-jre
+
+### *************
+
 ### Run below commands to install Java 11 on Amazon Linux:
 
 sudo amazon-linux-extras install java-openjdk11
