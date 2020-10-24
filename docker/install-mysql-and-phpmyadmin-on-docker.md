@@ -73,11 +73,11 @@ docker pull mysql:8
 docker run -e MYSQL_ROOT_PASSWORD=pass123 -d mysql
 
 
-docker exec <mysql container id> mysql --version
+docker exec "mysql container id" mysql --version
 
-docker exec <mysql container id> mysql -uroot -p<root-passwd> -e 'show databases;'
+docker exec "mysql container id" mysql -uroot -p"root-passwd" -e 'show databases;'
 
-docker exec -it <mysql container id>  mysql -uroot -p<root-passwd>
+docker exec -it "mysql container id"  mysql -uroot -p<root-passwd>
 
 create database DEVTEST
    
@@ -90,7 +90,7 @@ docker pull phpmyadmin/phpmyadmin:latest
 
 ### link phpmyadmin container with mysql and  run in backgroud 
 
-docker run --name myadmin -d --link  <container id of mysql>:db -p 8899:80 phpmyadmin/phpmyadmin
+docker run --name myadmin -d --link  "container id of mysql":db -p 8899:80 phpmyadmin/phpmyadmin
 
 Note: we are using 8899 port for phpmyadmin. 
 
