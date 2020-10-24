@@ -46,7 +46,9 @@ useradd -d /home/awstechguide -m awstechguide
 
 ### create password for this user. a non expiry password
 
-passwd awstechguide passwd -x -1 awstechguide
+passwd awstechguide
+
+passwd -x -1 awstechguide
 
 ### add user to docker group after docker installation
 
