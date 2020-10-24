@@ -4,7 +4,7 @@ sudo apt-get update && sudo apt-get upgrade -y
 
 sudo apt-get install openjdk-11-jre -y 
 
-### Refer docker documentation to install docker on ubuntu ###***
+### Refer docker documentation to install docker on ubuntu
 
 ### https://docs.docker.com/engine/install/ubuntu/
 
