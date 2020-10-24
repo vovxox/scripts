@@ -1,4 +1,6 @@
-## Update ubuntu instance and install OpenJDK11
+## Install mysql and phpadmin on docker
+
+### Update ubuntu instance and install OpenJDK11
 
 sudo apt-get update && sudo apt-get upgrade -y 
 
