@@ -1,4 +1,4 @@
-## Update ubuntu instance and install OpenJDK11 ######*
+## Update ubuntu instance and install OpenJDK11
 
 sudo apt-get update && sudo apt-get upgrade -y 
 
