@@ -35,7 +35,7 @@ useradd -d /home/ansible-controller -m ansible-controller
 ### create password for this user. a non expiry password
 
 passwd ansible-controller 
---StrongPassword123!@#
+--StrongPassword123
 passwd -x -1 ansible-controller
 
 ### browse to /ect/ansible and open hosts file to add remote host ips
@@ -74,7 +74,7 @@ useradd -d /home/wordpress -m wordpress
 ### create password for this user. a non expiry password
 
 passwd wordpress
---StrongPassword123!@#
+--StrongPassword123
 passwd -x -1 wordpress
 
 ###change user to newly created user
