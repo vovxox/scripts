@@ -30,12 +30,13 @@ sudo su -
 
 ### create an user for ansible . make sure you are creating it as root. best practice to use user other than root. 
 
-useradd -d /home/awstechguide -m awstechguide
+useradd -d /home/ansible-controller -m ansible-controller
 
 ### create password for this user. a non expiry password
 
-passwd awstechguide
-passwd -x -1 awstechguide
+passwd ansible-controller 
+--StrongPassword123!@#
+passwd -x -1 ansible-controller
 
 ### browse to /ect/ansible and open hosts file to add remote host ips
 
@@ -68,16 +69,17 @@ sudo su -
 
 ### create an user in remotehost . make sure you are creating it as root. best practice to use user other than root. 
 
-useradd -d /home/awstgremotedb -m awstgremotedb
+useradd -d /home/wordpress -m wordpress
 
 ### create password for this user. a non expiry password
 
-passwd awstgremotedb
-passwd -x -1 awstgremotedb
+passwd wordpress
+--StrongPassword123!@#
+passwd -x -1 wordpress
 
 ###change user to newly created user
 
-su - awstgremotedb
+su - wordpress
 
 ### generate key in remote host
 
@@ -119,7 +121,7 @@ awstgremotedb@remotehost:~/.ssh$ ll
 
 ### MAKE SURE the permissions are -rw------- in remotehost /.ssh. if not change the permissions by chmod 600
 
-[awstgremotedb@ip-172-31-90-177 .ssh]$ chmod 600 authorized_keys
+[awstgremotedb@ip-172-31-90-177 .ssh]$ chmod 600 authorized_keys (copying pub key into it)
 [awstgremotedb@ip-172-31-90-177 .ssh]$ ll
 total 12
 -rw------- 1 awstgremotedb awstgremotedb  410 May 20 11:19 authorized_keys
