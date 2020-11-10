@@ -225,3 +225,13 @@ rpm -qa | grep ansible
 rpm -ql <package name> | more
 rpm -ql ansible-2.9.7-1.el8.noarch | more
 
+
+Make the user sudo
+visudo
+root    ALL=(ALL)       ALL
+ansible-slave ALL=(ALL)  NOPASSWD: ALL
+
+
+
+
+
