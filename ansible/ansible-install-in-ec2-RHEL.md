@@ -69,17 +69,17 @@ sudo su -
 
 ### create an user in remotehost . make sure you are creating it as root. best practice to use user other than root. 
 
-useradd -d /home/wordpress -m wordpress
+useradd -d /home/ansible-slave -m ansible-slave
 
 ### create password for this user. a non expiry password
 
-passwd wordpress
+passwd ansible-slave
 --StrongPassword123
-passwd -x -1 wordpress
+passwd -x -1 ansible-slave
 
 ###change user to newly created user
 
-su - wordpress
+su - ansible-slave
 
 ### generate key in remote host
 
